@@ -20,7 +20,7 @@ namespace WpfCustomUserControlsWithEventsDemo.UserControls
     /// </summary>
     public partial class NameAgeUC : UserControl
     {
-        internal event EventHandler<CustomArgs>? OnButtonClick;
+        internal event EventHandler<CustomArgs>? OnButtonClick; // declare the custom event (accessibility must be matched!)
         public NameAgeUC()
         {
             InitializeComponent();
@@ -38,8 +38,8 @@ namespace WpfCustomUserControlsWithEventsDemo.UserControls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CustomArgs args = new(txtName.Text, txtAge.Text);
-            OnButtonClick?.Invoke(this, args);
+            CustomArgs args = new(txtName.Text, txtAge.Text); // Unbind entered name and age into the custom event argument
+            OnButtonClick?.Invoke(this, args); // Raise the event
         }
     }
 }

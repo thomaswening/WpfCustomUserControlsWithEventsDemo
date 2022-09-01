@@ -20,14 +20,15 @@ namespace WpfCustomUserControlsWithEventsDemo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window // This class is the subscriber for the custom event
     {
         public MainWindow()
         {
             InitializeComponent();
-            NameAgeTab.OnButtonClick += MakeGreeting;
+            NameAgeTab.OnButtonClick += MakeGreeting; // subscribe
         }
 
+        // Event handling method passes the custom event argument on to the other custom UC for display
         internal void MakeGreeting(object? sender, CustomArgs args) => GreetingTab.MakeGreeting(args.Name, args.Age);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfCustomUserControlsWithEventsDemo.UserControls
 {
-    internal class CustomArgs
+    internal class CustomArgs // This custom event argument class bears entered name and age
     {
         public string Name { get; set; }
         public string Age { get; set; }

@@ -4,14 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCustomUserControlsWithEventsDemo"
+        
         xmlns:uc="clr-namespace:WpfCustomUserControlsWithEventsDemo.UserControls"
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="auto" MinWidth="300" Width="500">
     <TabControl>
+        
+        <!--First custom user control-->
         <TabItem Header="Name and Age">
             <uc:NameAgeUC x:Name="NameAgeTab"/>
         </TabItem>
 
+        <!--Second custom user control-->
         <TabItem Header="Greeting">
             <uc:GreetingUC x:Name="GreetingTab"/>
         </TabItem>
