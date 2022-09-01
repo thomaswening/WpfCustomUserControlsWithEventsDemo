@@ -8,17 +8,17 @@
         xmlns:uc="clr-namespace:WpfCustomUserControlsWithEventsDemo.UserControls"
         
         mc:Ignorable="d"
-        Title="MainWindow" Height="auto" MinWidth="300" Width="500">
-    <TabControl>
+        Title="MainWindow" Height="150" Width="800">
+    <TabControl x:Name="tabs">
         
         <!--First custom user control-->
-        <TabItem Header="Name and Age">
-            <uc:NameAgeUC x:Name="NameAgeTab"/>
+        <TabItem x:Name="nameAgeTab" Header="Name and Age">
+            <uc:NameAgeUC x:Name="nameAgeUC"/>
         </TabItem>
 
         <!--Second custom user control-->
-        <TabItem Header="Greeting">
-            <uc:GreetingUC x:Name="GreetingTab"/>
+        <TabItem x:Name="greetingTab" Header="Greeting">
+            <uc:GreetingUC x:Name="greetingUC"/>
         </TabItem>
     </TabControl>
 </Window>

@@ -25,10 +25,14 @@ namespace WpfCustomUserControlsWithEventsDemo
         public MainWindow()
         {
             InitializeComponent();
-            NameAgeTab.OnButtonClick += MakeGreeting; // subscribe
+            nameAgeUC.OnButtonClick += MakeGreetingAndSwitchTab; // subscribe
         }
 
-        // Event handling method passes the custom event argument on to the other custom UC for display
-        internal void MakeGreeting(object? sender, CustomArgs args) => GreetingTab.MakeGreeting(args.Name, args.Age);
+        // Event handling method passes the custom event argument containing entered name and age on to the other custom UC for display
+        internal void MakeGreetingAndSwitchTab(object? sender, CustomArgs args)
+        {
+            greetingUC.MakeGreeting(args.Name, args.Age);
+            tabs.SelectedItem = greetingTab;
+        }
     }
 }
