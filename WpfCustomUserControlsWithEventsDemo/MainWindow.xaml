@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfCustomUserControlsWithEventsDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCustomUserControlsWithEventsDemo"
+        xmlns:uc="clr-namespace:WpfCustomUserControlsWithEventsDemo.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="auto" MinWidth="300" Width="500">
+    <TabControl>
+        <TabItem Header="Name and Age">
+            <uc:NameAgeUC x:Name="NameAgeTab"/>
+        </TabItem>
+
+        <TabItem Header="Greeting">
+            <uc:GreetingUC x:Name="GreetingTab"/>
+        </TabItem>
+    </TabControl>
+</Window>
